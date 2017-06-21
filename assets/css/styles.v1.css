@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+body { margin:0; padding:0; font-family: 'Open Sans', sans-serif;}
+main {position: relative; width: 100%; height: 100vh; overflow: hidden; display: flex;}
+#map-section {width: 25%; height: 100vh; position: relative;}
+#map-section > .overlay{z-index: 2;position: absolute; width: 100%; height: 100vh;}
+#map {width: 100%; height: 100vh;}
+#info {
+  position: relative;
+  z-index: 2;
+  width: 75%;
+  height: 100vh;
+  background-color: #fff;
+  padding: 1em 0;
+  -webkit-box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.5);
+}
+.paint-roller-section{
+  position: absolute;
+  top: -2em;
+  z-index: 5;
+  height: 100vh;
+  width: 75%;
+  left: -75%;
+  transition: all .5s ease-in-out;
+}
+.paint-roller-section.active{
+  position: absolute;
+  top: -2em;
+  z-index: 5;
+  height: 100vh;
+  width: 75%;
+  left: 0;
+  transition: all .5s ease-in-out;
+}
+.paint-roller-section > .re-paint{
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: relative;
+}
+.paint-roller-section > .re-paint > img{
+  width: 100%;
+  height: 100%;
+}
+.big-img-display{
+  cursor: pointer;
+  z-index: 5;
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  background-color:  rgba(0,0,0,0.5);
+}
+.big-img-display.active{
+  cursor: pointer;
+  z-index: 5;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color:  rgba(0,0,0,0.5);
+}
+.big-img-display.active > img{
+  width: 100%;
+  padding: 1em;
+  background: #fff;
+  -webkit-box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.5);
+  margin: 4em;
+}
+.button-section{
+  z-index: 3;
+  position: absolute;
+  left: calc(75% - 2em);
+  top: calc((100% - 10em)/2);
+}
+.button-section > .btn:first-child{
+  margin-bottom: 1em;
+}
+.button-section > .btn{
+  display: flex;
+  width: 2em;
+  height: 2em;
+  font-size: 2em;
+  font-weight: bold;
+  color: #fff;
+  background-color: #767a7a;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.button-section > .btn > span{
+  padding-bottom: .2em;
+  margin: auto;
+}
+.header{
+  width: 100%;
+  display: flex;
+}
+.logo-wallls{
+  font-family: 'Brown Fox', sans-serif;
+  color: #BD0019;
+  position: absolute;
+  top: 2.65em;
+  left: 4.25em;
+  font-size: 1.75em;
+}
+.logo-detroit{
+  position: absolute;
+  top: 2.1em;
+  left: 6.65em;
+  font-size: 1.5em;
+  font-family: 'Biryani', sans-serif;
+  font-weight: bold;
+}
+.logo{
+  margin-right: 10em;
+  width: 8em;
+  position: relative;
+}
+.logo > img{
+  width: 100%;
+}
+.D{
+  position: absolute;
+  width: 2em;
+  height: 2.5em;
+  border: .75em solid #000;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  background-color: #fff;
+  top: 3.25em;
+  left:6.3em;
+}
+.mural-title{
+  padding-top: 2em;
+  font-family: 'Roboto', sans-serif;
+  flex: 1;
+  color: #BD0019;
+}
+.mural-title > h1{
+  font-size: 2em;
+  text-align: center;
+}
+.before-after-section{
+  width: 100%;
+  display: flex;
+}
+.before-after-section > article{
+  width: 50%;
+}
+.before-after-section > .collage{
+  position: relative;
+}
+.before-after-section > .collage > .img-holder{
+  cursor: pointer;
+  padding: .5em;
+  position: relative;;
+  background-color: #fff;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
+}
+.before-after-section > .collage > .img-holder:first-child{
+  width: 75%;
+  top: 2em;
+  left: 1em;
+  z-index: 2;
+}
+.before-after-section > .collage > .img-holder:first-child:hover, .before-after-section > .collage > .img-holder:nth-child(2):hover, .before-after-section > .collage > .img-holder:nth-child(3):hover{
+  z-index: 10;
+}
+.before-after-section > .collage > .img-holder:nth-child(2){
+  width: 50%;
+  top: -25%;
+  left: 40%;
+  z-index: 3;
+}
+.before-after-section > .collage > .img-holder:nth-child(3){
+  top: -40%;
+  left: 20%;
+  width: 65%;
+}
+.before-after-section > .collage > .img-holder > img{
+  width: 100%;
+}
+.before-after-section > .text-content{
+  padding: 0 2em 0 1em;
+  z-index: 5;
+  max-height: 30em;
+}
+.before-after-section > .text-content > h3{
+  margin: 0;
+  color: #D98700;
+}
+.before-after-section > .text-content > hr{
+  border-color: #D98700;
+}
+.artist-sponsor-section{
+  position: relative;
+  top: -35%;
+  width: 100%;
+  display: flex;
+}
+.artist-sponsor-section > .artist-profile{
+  width: 80%;
+  padding: 0 1em;
+  display: flex;
+}
+.artist-sponsor-section > .artist-profile > .artist-img{
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.artist-sponsor-section > .artist-profile > .artist-img > img{
+  height: 100%;
+}
+.artist-sponsor-section > .artist-profile > .artist-smll-bio{
+  flex: 1;
+  display: flex;
+  position: relative;
+  left: -2em;
+  -webkit-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.5);
+  box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.5);
+}
+.artist-sponsor-section > .artist-profile > .artist-smll-bio > article{
+  padding-left: 4em;
+  margin: auto;
+  position: relative;
+  left: -1em;
+}
+.artist-smll-bio > article > h4{
+  margin: 0;
+}
+.artist-sponsor-section > .sponsor-place{
+  flex: 1;
+  display: flex;
+}
+.artist-sponsor-section > .sponsor-place > .img-holder{
+  width: 10em;
+}
+.sponsor-place > .img-holder > img{
+  width: 100%;
+}
+#close-emergency-modal-btn{
+  cursor: pointer;
+  position: absolute;
+  right: -2.5em;
+  top: calc((100vh - 3em)/2);
+  width: 3em;
+  height: 3em;
+}
+#close-emergency-modal-btn:hover{
+  -webkit-animation: animation-close-btn 1s ease forwards;
+  animation: animation-close-btn 1s ease forwards;
+}
+@-webkit-keyframes animation-close-btn {
+  0%, 50% { -webkit-transform: rotate(0deg); }
+  75% { -webkit-transform: rotate(450deg); }
+  100% { -webkit-transform: rotate(405deg); }
+}
+@keyframes animation-close-btn {
+  0%, 50% { -webkit-transform: rotate(0deg); }
+  75% { -webkit-transform: rotate(360deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+#close-emergency-modal-btn > img{
+  width: 100%;
+}

@@ -1,0 +1,752 @@
+a{text-decoration: none;}
+body{margin: 0;padding: 0;}
+main{width: 95%; margin: 0 2.5%; font-family: 'Open Sans', sans-serif;}
+@import url('assets/fonts/Brown Fox.ttf');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+.margin-bottom-1{margin-bottom: 1em;}
+.margin-bottom-2{margin-bottom: 2em;}
+.margin-bottom-3{margin-bottom: 3em;}
+.margin-bottom-4{margin-bottom: 4em;}
+.margin-bottom-5{margin-bottom: 5em;}
+.flex-box{display: flex;}
+#top{
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.logo-wallls{
+  font-family: 'Brown Fox', sans-serif;
+  color: #18a696;
+  position: absolute;
+  top: 1.5em;
+  left: 2.75em;
+  font-size: 1.5em;
+}
+.logo-detroit{
+  color: #004445;
+  position: absolute;
+  top: 1em;
+  left: 4.5em;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+.logo{
+  cursor: pointer;
+  width: 10em;
+  position: relative;
+}
+.logo > img{
+  width: 100%;
+}
+.c{
+  position: absolute;
+  width: 1.5em;
+  height: 2em;
+  overflow: hidden;
+  top: 1.6em;
+  left:4em;
+}
+.c > article{
+  width: 2em;
+  height: 1em;
+  border: .5em solid #004445;
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+}
+#top > .space-break{
+  flex: 1;
+}
+#top > nav{
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: right;
+}
+#top > nav > article > a{
+  position: relative;
+  margin-left: 2em;
+  text-decoration: none;
+  color: #18a696;
+  transition: all .2s ease-in-out;
+}
+#top > nav > article > a:hover > .slider{
+  width: 100%;
+  transition: width .2s ease;
+}
+#top > nav > article > a > .slider {
+    position: absolute;
+    display:block;
+    left: 0;
+    top:90%;
+    margin:0 auto;
+    height: 2px;
+    background-color: #18a696;
+    width: 0%;
+    transition: width .2s ease;
+}
+.local-nav-row{
+  padding: 1em;
+  background-color: rgba(246,89,16, .1);
+  display: flex;
+  justify-content: center;
+}
+.local-nav > a{
+  font-weight: bold;
+  position: relative;
+  margin-left: 2em;
+  text-decoration: none;
+  color: #F65910;
+  transition: all .2s ease-in-out;
+}
+.local-nav > a:hover > .slider{
+  width: 100%;
+  transition: width .2s ease;
+}
+.local-nav > a > .slider {
+    position: absolute;
+    display:block;
+    left: 0;
+    top:90%;
+    margin:0 auto;
+    height: 2px;
+    background-color: #F65910;
+    width: 0%;
+    transition: width .2s ease;
+}
+.mural-intro{
+  position: relative;
+  margin-bottom: 2em;
+  height: 50vh;
+  background-image: url('/Portals/0/Images/DetroitWalls/viaduct-2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.feature-art-box{
+  position: absolute;
+  bottom: -2em;
+  left: 2em;
+  width: 30%;
+  padding: 1em;
+  background: #fff;
+  -webkit-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.5);
+  box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.5);
+}
+.feature-art-box > article{
+  position: relative;
+}
+.feature-art-box > article > h2{
+  margin: 0;
+}
+.feature-art-box > article > h2 > a{
+  color: #18a696;
+}
+.feature-art-box > article > a{
+  position: absolute;
+  top: -5em;
+  right: .25em;
+}
+.feature-art-box > article > a > .featured-art-box-artist{
+  width: 6.25em;
+  position: relative;
+  padding: 1em;
+  border:.25em solid #F65910;
+  font-weight: bold;
+  margin-bottom: .5em;
+  text-align: center;
+  cursor: pointer;
+  background-color: #fff;
+  color: #F65910;
+}
+.feature-art-box > article > a > .featured-art-box-artist > .cover-skin{
+  text-align: center;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #F65910;
+  transition: all 0.1s ease-in-out;
+}
+.feature-art-box > article > a > .featured-art-box-artist:hover > .cover-skin{
+  text-align: center;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #F65910;
+  transition: all 0.1s ease-in-out;
+}
+.feature-art-box > article > a > .featured-art-box-artist > .cover-skin > span{
+  position: relative;
+  color: transparent;
+  top: 1em;
+}
+.feature-art-box > article > a > .featured-art-box-artist:hover > .cover-skin > span{
+  position: relative;
+  color: #fff;
+  top: 1em;
+}
+.mural-intro > .info-block{
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #e2e1df;
+  margin-left: 70%;
+  width: 30%;
+  height: 50vh;
+  -webkit-box-shadow: -5px 0px 0px -2px rgba(0,0,0,0.5);
+  -moz-box-shadow: -5px 0px 0px -2px rgba(0,0,0,0.5);
+  box-shadow: -5px 0px 0px -2px rgba(0,0,0,0.5);
+  padding: 1em 1em;
+}
+.info-block > a  > .main-topic{
+  height: calc(50vh/4);
+  position: relative;
+}
+.info-block > a  > .main-topic > .text-box{
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fff;
+  transition: all .2s ease-in-out;
+}
+.info-block > a  > .main-topic > .text-box:hover{
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all .2s ease-in-out;
+}
+.text-box > span{
+  padding: 1em 0 0 1em;
+}
+.info-block > a:nth-child(1)  > .main-topic{
+  background-image: url('/Portals/0/Images/DetroitWalls/community-1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.info-block > a:nth-child(2)  > .main-topic{
+  background-image: url('/Portals/0/Images/DetroitWalls/lifes-2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.info-block > a:nth-child(3)  > .main-topic{
+  background-image: url('/Portals/0/Images/DetroitWalls/community-3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.info-block > a:nth-child(4)  > .main-topic{
+  background-image: url('/Portals/0/Images/DetroitWalls/artist-3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.we-are{
+  height: 5em;
+  margin: 1em 0;
+
+}
+.we-are > span{
+  color: #18a696;
+  font-weight: bold;
+  font-size: 150%;
+}
+.content-row{
+  width: 100%;
+  display: flex;
+}
+.artist{
+  width: 75%;
+  height: 9em;
+}
+.artist > .header{
+  position: relative;
+  height: 5em;
+}
+.artist > .header > hr{
+  position: relative;
+  top: 1em;
+  width: 102%;
+  border-color: #18a696;
+}
+.artist > .header > h2{
+  position: absolute;
+  top: -1.25em;
+  left: calc((100% - 10em)/2);
+  padding: .5em 1em;
+  background-color: #fff;
+  color: #18a696;
+}
+.artist-list{
+  top: -2em;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.artist-list.bottom-list{
+  align-items: flex-end;
+}
+.artist-list.bottom-list > a > .artist-profile{
+  position: relative;
+}
+.artist-list.top-list > a > .artist-profile > .img-holder{
+  cursor: pointer;
+  border-top-right-radius: 10em;
+  border-top-left-radius: 10em;
+  width: 10em;
+  height: 5em;
+  overflow: hidden;
+  transition: all .1s ease-in-out;
+}
+.artist-list.top-list > a > .artist-profile:hover > .img-holder{
+  border-radius: 50%;
+  height: 10em;
+  transition: all .1s ease-in-out;
+}
+.artist-list.bottom-list > a > .artist-profile > .img-holder{
+  cursor: pointer;
+  border-bottom-right-radius: 10em;
+  border-bottom-left-radius: 10em;
+  width: 10em;
+  height: 5em;
+  overflow: hidden;
+  transition: all .1s ease-in-out;
+}
+.artist-list.bottom-list > a >.artist-profile:hover > .img-holder{
+  border-radius: 50%;
+  height: 10em;
+  transition: all .1s ease-in-out;
+}
+.artist-list > a > .artist-profile > span{
+  width: 10em;
+  z-index: 1;
+  font-weight: bold;
+  font-size: 1.25em;
+  position: absolute;;
+  color: #18a696;
+}
+.artist-list.top-list > a > .artist-profile > span{
+  top: 4em;
+  margin-left: 8em;
+  opacity: 0;
+  transition: all .1s ease-in-out;
+}
+.artist-list.top-list > a > .artist-profile:hover > span{
+  opacity: 1;
+  transition: all .1s ease-in-out;
+}
+.artist-list.bottom-list > a > .artist-profile > span{
+  top: 3em;
+  margin-left: 8em;
+  opacity: 0;
+  transition: all .1s ease-in-out;
+}
+.artist-list.bottom-list > a > .artist-profile:hover > span{
+  opacity: 1;
+  transition: all .1s ease-in-out;
+}
+.artist-list > a > .artist-profile > .img-holder > img{
+  width: 100%;
+}
+.artist-list > a > .artist-profile:hover > .img-holder > img{
+  height: 100%;
+}
+.all-artist{
+  width: 100%;
+  display: flex;
+}
+.all-artist > a > .registartion-btn{
+  position: relative;
+  padding: 1em 2em;
+  border:.25em solid #18a696;
+  font-weight: bold;
+  margin-bottom: .5em;
+  text-align: center;
+  cursor: pointer;
+  color: #18a696;
+}
+.all-artist > a > .registartion-btn > .cover-skin{
+  text-align: center;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #18a696;
+  transition: all 0.1s ease-in-out;
+}
+.all-artist > a{
+  margin: auto;
+  text-decoration: none;
+  width: 50%;
+}
+.all-artist > a > .registartion-btn:hover > .cover-skin{
+  text-align: center;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #18a696;
+  transition: all 0.1s ease-in-out;
+}
+.all-artist > a > .registartion-btn > .cover-skin > span{
+  position: relative;
+  color: transparent;
+  top: 1em;
+}
+.all-artist > a > .registartion-btn:hover > .cover-skin > span{
+  position: relative;
+  color: #fff;
+  top: 1em;
+}
+.registration{
+  position: relative;
+  top: 1.5em;
+  width: 25%;
+  padding-right: 2em;
+}
+#join{
+  display: flex;
+}
+#join > .registration{
+  width: 33.33333%;
+}
+.registration > a > .registartion-btn{
+  position: relative;
+  padding: 1em;
+  border:.25em solid #F65910;
+  font-weight: bold;
+  margin-bottom: .5em;
+  text-align: center;
+  cursor: pointer;
+  color: #F65910;
+}
+.registration > a > .registartion-btn > .cover-skin{
+  text-align: center;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #F65910;
+  transition: all 0.1s ease-in-out;
+}
+.registration > a{
+  text-decoration: none;
+}
+.registration > a > .registartion-btn:hover > .cover-skin{
+  text-align: center;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #F65910;
+  transition: all 0.1s ease-in-out;
+}
+.registration > a > .registartion-btn > .cover-skin > span{
+  position: relative;
+  color: transparent;
+  top: 1em;
+}
+.registration > a > .registartion-btn:hover > .cover-skin > span{
+  position: relative;
+  color: #fff;
+  top: 1em;
+}
+.lear-more-link > a{
+  font-weight: bold;
+  color: #18a696;
+  transition: all 0.1s ease-in-out;
+}
+.lear-more-link > a:hover > .slider{
+  width: 7em;
+  transition: width .2s ease;
+}
+.lear-more-link > a > .slider {
+    position: absolute;
+    display:block;
+    left: 0;
+    bottom: 0;
+    margin:0 auto;
+    height: 2px;
+    background-color: #18a696;
+    width: 0%;
+    transition: width .2s ease;
+}
+.map-section{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3em;
+}
+.map-section > .img-holder{
+  width:20em;
+  height: 20em;
+  border-radius: 50%;
+  z-index: 2;
+  overflow: hidden;
+}
+.map-section > .img-holder > img{
+  width: 100%;
+  height: 100%;
+}
+.map-section > .map-text{
+  background-color: #fff;
+  position: relative;
+  left: -3em;
+  flex: 1;
+  padding: 1em 2em 1em 4em;
+  -webkit-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.5);
+  box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.5);
+}
+.map-section > .map-text > h3{
+  color: #18a696;
+  margin: 0;
+}
+.map-lear-more-link > a{
+  font-weight: bold;
+  color: #18a696;
+  transition: all 0.1s ease-in-out;
+}
+.map-lear-more-link > a:hover > .slider{
+  width: 14em;
+  transition: width .2s ease;
+}
+.map-lear-more-link > a > .slider {
+    position: absolute;
+    display:block;
+    left: 3.75em;
+    bottom: 1.5em;
+    margin:0 auto;
+    height: 2px;
+    background-color: #18a696;
+    width: 0%;
+    transition: width .2s ease;
+}
+.quote-section{
+  width: 100%;
+  position: relative;
+  margin-bottom: 5em;
+}
+.quote-section > .img-holder{
+  margin-left: 20%;
+  width: 60%;
+}
+.quote-section > .img-holder > img{
+  width: 100%;
+}
+.quote-section > .quote-text{
+  position: absolute;
+  bottom: -1em;
+  right: 18%;
+  background: #fff;
+  width: 40%;
+  -webkit-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.5);
+  box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.5);
+}
+.quote-text > blockquote{
+  font-size: 1.5em;
+}
+.event-container{
+	width: 100%;
+}
+.event-container > .event-list{
+	display: flex;
+	justify-content: center;
+}
+.event-list > .event-item{
+	margin-right: 2em;
+	width: 33.3333%;
+}
+.event-list > .event-item > .event-banner{
+	width: 100%;
+	height: 20em;
+	overflow: hidden;
+}
+.event-list > .event-item > .event-banner > img{
+	max-width: 100%;
+}
+.event-item > .event-details{
+	display: flex;
+}
+.event-details > .event-date{
+  color: #18a696;
+	padding-right: .5em;
+	font-size: 2em;
+	font-weight: bold;
+	text-align: center;
+}
+.event-details > .event-date > span{
+	position: relative;
+}
+.event-date > span.event-month{
+	font-size: 50%;
+  left: .2em;
+  top: -1em;
+}
+.event-date > span.event-year{
+	font-size: 50%;
+  top: -2em;
+}
+.event-description{
+	padding-top: .5em;
+}
+.event-description > .event-name{
+	cursor: pointer;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+.row.top-hero{
+  margin-bottom: 4em;
+}
+.row.top-hero > article{
+  position: relative;
+}
+.row.top-hero > article > img{
+  width: 100%;
+}
+.row.top-hero > article > .feature-art-box{
+  width: 50%;
+}
+.row.top-hero > article > .feature-art-box > article > h2{
+  font-size: 2em;
+}
+.row.profile-list{
+  display: flex;
+  justify-content: space-between;
+}
+.row.profile-list > a{
+  flex: 1;
+  max-width: 25em;
+  padding-left: 1em;
+}
+.row > a > .profile{
+  -webkit-box-shadow: 5px -.1px 0px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 5px -.1px 0px 0px rgba(0,0,0,0.5);
+  box-shadow: 5px -.1px 0px 0px rgba(0,0,0,0.5);
+  border-bottom: 1px solid #cfc8c8;
+}
+.row > a > .profile > h4{
+  color: #F65910;
+  padding: .2em .5em;
+}
+.row > a > .profile > .img-holder{
+  width: 100%;
+  height: 10em;
+  overflow: hidden;
+}
+.row > a > .profile > .img-holder > img{
+  transition: all .2s ease-in-out;
+  width: 100%;
+}
+.row > a > .profile:hover > h4{
+  font-weight: bold;
+}
+.row > a > .profile:hover > .img-holder > img{
+  transition: all .5s ease-in-out;
+  transform: scale(1.1);
+}
+.profile-content{
+  display: flex;
+  height: calc(100vh - 5.375em);
+}
+.profile-content > article{
+  width: 50%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.profile-content > article:first-child{
+  overflow: hidden;
+}
+.profile-content > article:first-child > img{
+  width:  100%;
+  height: 100%;
+  z-index: 5;
+}
+.row.artist-bio{
+  width: 100%;
+  height: 50%;
+  margin: 0;
+  padding: 0;
+}
+.artist-bio > .bio-container{
+  background-color: #F65910;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.bio-container > .bio-text{
+  margin: auto;
+  padding: 1em;
+}
+.artist-portafolio{
+  width: 100%;
+  height: 25%;
+  margin: 0 !important;
+  padding: 0;
+  display: flex;
+}
+.artist-portafolio > .columns{
+  overflow: hidden;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: .25em solid #000;
+}
+.artist-portafolio > .columns > img{
+  max-width: 200%;
+  height: 100%;
+}
+.before-after-artwork{
+  width: 100%;
+  display: flex;
+}
+.before-container, .after-container{
+  width: 50%;
+  overflow: hidden;
+}
+.before-after-artwork > .before-container > img, .before-after-artwork > .after-container > img{
+  max-width: 200% !important;
+}
+.before-after-artwork > .after-container > img{
+  position: relative;
+  right: 103%;
+}
+.staff-row{
+  display: flex;
+  justify-content: space-between;
+}
+.flex-box > a{
+  flex: 1;
+  padding-left: 1em;
+}
+.flex-box > .medium-2{
+  width: 20%;
+}
+.flex-box > .medium-10{
+  width: 80%;
+  padding-left: 1em;
+}
+.flex-box > article > img{
+  width: 100%;
+}
